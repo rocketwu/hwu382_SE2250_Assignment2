@@ -9,10 +9,13 @@ public class playerMove : MonoBehaviour {
 
     //private bool ability = true;
     private Rigidbody rigidbody;
+    private MeshRenderer meshRenderer;
+    private Color orColor;
     // Use this for initialization
     void Start () {
         rigidbody = GetComponent<Rigidbody>();
-        m = GetComponent<Material>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        orColor = meshRenderer.material.color;
     }
 	
 	// Update is called once per frame
@@ -40,11 +43,13 @@ public class playerMove : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.localScale *= 2f;
+            meshRenderer.material.color = new Color(0,0,0);
             
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             transform.localScale *= 0.5f;
+            meshRenderer.material.color = orColor;
         }
 
         
