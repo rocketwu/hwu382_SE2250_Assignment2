@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pickupProperty : MonoBehaviour {
+    static Color[] scoreToColor = new Color[] { new Color(150, 240, 150), new Color(75, 170, 220), new Color(250, 170, 155) };
 
     public float rotateSpeed = 40f;
     public float amplitude = 1f;
-
+    public int Score
+    {
+        get { return score; }
+        set { if (value > 0 && value < 4)
+                { score = value; }
+              else { score = 1; }
+            }
+    }
 
     private int score = 1;
     private Color color;
@@ -22,10 +30,10 @@ public class pickupProperty : MonoBehaviour {
         vibration();
     }
 
-    public void initObject(int score, Color color)
+    public void initObject(int score)
     {
         this.score = score;
-        this.color = color;
+        this.color = scoreToColor[score-1];
         gameObject.GetComponent<MeshRenderer>().material.color = this.color;
         GetComponentInChildren<Light>().color = this.color;
 
