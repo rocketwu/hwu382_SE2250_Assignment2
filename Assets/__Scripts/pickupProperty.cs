@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pickupProperty : MonoBehaviour {
-    static Color[] scoreToColor = new Color[] { new Color(150, 240, 150), new Color(75, 170, 220), new Color(250, 170, 155) };
+    static Color[] scoreToColor = new Color[] { new Color(150f/255, 240f/255, 150f/255), new Color(75f/255, 170f/255, 220f/255), new Color(250f/255, 170f/255, 155f/255) };
 
     public float rotateSpeed = 40f;
     public float amplitude = 1f;

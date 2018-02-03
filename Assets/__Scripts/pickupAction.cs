@@ -24,6 +24,7 @@ public class pickupAction : MonoBehaviour {
             pickupProperty pP = other.GetComponent<pickupProperty>();
             updateScore(pP.getScore());
             other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
 
         }
     }
