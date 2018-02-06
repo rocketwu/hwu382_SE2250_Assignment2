@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour {
 
-    public float speed = 1f;
-    public float maxVelocity=10f;
+    public float speed = 5f;
+    public float maxVelocity=5f;
 
     //private bool ability = true;
     private Rigidbody rigidbody;
@@ -33,7 +33,8 @@ public class playerMove : MonoBehaviour {
         //}
         if (rigidbody.velocity.magnitude<=maxVelocity)
         {
-            rigidbody.AddForce(v * speed, 0, h * speed, ForceMode.Impulse);
+            //rigidbody.AddForce(v * speed, 0, h * speed, ForceMode.Impulse);
+            rigidbody.AddForce(v * speed, 0, h * speed);
         }
         else
         {
