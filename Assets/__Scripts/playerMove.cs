@@ -41,17 +41,17 @@ public class playerMove : MonoBehaviour {
             rigidbody.velocity *= maxVelocity / rigidbody.velocity.magnitude;
         }
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.localScale *= 2f;
-            meshRenderer.material.color = new Color(0,0,0);
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    transform.localScale *= 2f;
+        //    meshRenderer.material.color = new Color(0,0,0);
             
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            transform.localScale *= 0.5f;
-            meshRenderer.material.color = orColor;
-        }
+        //}
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    transform.localScale *= 0.5f;
+        //    meshRenderer.material.color = orColor;
+        //}
 
         
         

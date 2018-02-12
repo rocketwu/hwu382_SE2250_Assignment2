@@ -1,0 +1,28 @@
+Two way:
+	1. create pickups in the hierarchy directly
+	2. design it as a prefab and use script to create pickus automatically 
+
+Choose 2
+	Beacuse any change can be easily done by changing the prefab,and it is done automatically, you can change the number of pickups by simply change the loop.
+
+
+
+
+
+
+===========ignore=====================ignore below===============ignore below=======================
+ways to design pickups:
+
+	1. design as static collider
+		pickup has collider which IsTrigger is true but don't has rigidbody
+	2. design as kinematic rigidbody collider 
+		pickup has collider and rigidbody and both IsTrigger and IsKinematic are true
+	3. design as rigidbody collider
+		pickup has collider and rigidbody and only IsTrigger is true (and disable use gravity)
+
+choose 2:
+
+	First way is for the object whose transform is not change, but the pickup I design is rotating and waving up and down. so first way is not the option.
+	Third way is for the object who needs be fully simulated by physics engine, but the pickup don't need to respond to the physics
+	
+	Second way is good because it blocks the physics engine which save the resources.

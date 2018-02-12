@@ -24,17 +24,17 @@ public class autoCreate : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (objToCreate == null) return;
-        timer += Time.deltaTime;
-        if (timer >= createTime)
-        {
-            float x = Random.Range(-7, 7);
-            float z = Random.Range(-7, 7);
-            int score = Random.Range(1, 3);
-            Instantiate(objToCreate, new Vector3(x, 1, z), objToCreate.transform.rotation).GetComponent<pickupProperty>().initObject(score);
-            timer = 0;
-            createTime = Random.Range(3, 7);
-        }
+        //if (objToCreate == null) return;
+        //timer += Time.deltaTime;
+        //if (timer >= createTime)
+        //{
+        //    float x = Random.Range(-7, 7);
+        //    float z = Random.Range(-7, 7);
+        //    int score = Random.Range(1, 3);
+        //    Instantiate(objToCreate, new Vector3(x, 1, z), objToCreate.transform.rotation).GetComponent<pickupProperty>().initObject(score);
+        //    timer = 0;
+        //    createTime = Random.Range(3, 7);
+        //}
     }
 
 
